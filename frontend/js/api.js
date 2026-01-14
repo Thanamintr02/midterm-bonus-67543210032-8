@@ -96,4 +96,4 @@ class LibraryAPI {
 }
 
 // Initialize API client
-const api = new LibraryAPI('http://localhost:3000/api');
+const api = new LibraryAPI('http://192.168.56.102:3000/api');
