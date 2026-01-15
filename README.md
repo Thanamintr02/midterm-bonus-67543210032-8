@@ -52,5 +52,4 @@ PATCH	/api/books/:id/return	คืนหนังสือ (เปลี่ย�
 DELETE	/api/books/:id	ลบหนังสือ
 
 ## Screenshots
-
-[เพิ่ม screenshots ของ UI]
+<img width="1897" height="939" alt="image" src="https://github.com/user-attachments/assets/aba4424c-5df6-4e28-90f6-39391b24fcc0" />
