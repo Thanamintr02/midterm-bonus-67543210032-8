@@ -34,20 +34,20 @@ class BookService {
 
     // TODO: Implement createBook
     async createBook(bookData) {
-        // 1. & 2. Validate data & ISBN (เรียกใช้ validator ที่เตรียมไว้)
-        bookValidator.validateBook(bookData);
-        // 3. เรียก repository
+        // 1. & 2. Validate data & ISBN (เปลี่ยนชื่อให้ตรงกับ validator)
+        bookValidator.validateBookData(bookData); // ✅ แก้เป็นชื่อนี้
+        bookValidator.validateISBN(bookData.isbn);
         const id = await bookRepository.create(bookData);
-        // 4. return created book
         return await bookRepository.findById(id);
-    }
+}
 
     // TODO: Implement updateBook
     async updateBook(id, bookData) {
-        bookValidator.validateBook(bookData);
-        const existingBook = await this.getBookById(id);
+        bookValidator.validateBookData(bookData); // ✅ แก้เป็นชื่อนี้
+        bookValidator.validateISBN(bookData.isbn);
+        await this.getBookById(id);
         await bookRepository.update(id, bookData);
-        return await bookRepository.findById(id);
+ return await bookRepository.findById(id);
     }
 
     // TODO: Implement borrowBook
@@ -76,12 +76,12 @@ class BookService {
 
     // TODO: Implement deleteBook
     async deleteBook(id) {
-        const book = await this.getBookById(id);
-        if (book.status === 'borrowed') {
-            throw new Error('Cannot delete borrowed book');
-        }
-        await bookRepository.delete(id);
-        return true;
+        const book = await this.getBookById(id); // ตัวนี้จะเช็คเองว่ามีหนังสือไหม
+    if (book.status === 'borrowed') {
+        throw new Error('Cannot delete borrowed book');
+    }
+    await bookRepository.delete(id);
+    return true;
     }
 }
 

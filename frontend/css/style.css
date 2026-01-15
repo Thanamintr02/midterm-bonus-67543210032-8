@@ -2,7 +2,8 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    /* เปลี่ยน Gradient เป็นน้ำเงินไปแดง */
+    background: linear-gradient(135deg, #2563eb 0%, #ef4444 100%);
     min-height: 100vh;
     padding: 20px;
 }
@@ -19,12 +20,13 @@ body {
 header {
     text-align: center;
     padding-bottom: 20px;
-    border-bottom: 3px solid #667eea;
+    /* เส้นขีดล่างเป็นสีน้ำเงิน */
+    border-bottom: 3px solid #2563eb;
     margin-bottom: 30px;
 }
 
 header h1 {
-    color: #667eea;
+    color: #2563eb;
     font-size: 32px;
     margin-bottom: 10px;
 }
@@ -54,9 +56,9 @@ header h1 {
 
 .filter-btn {
     padding: 10px 20px;
-    border: 2px solid #667eea;
+    border: 2px solid #2563eb;
     background: white;
-    color: #667eea;
+    color: #2563eb;
     border-radius: 8px;
     cursor: pointer;
     font-weight: 600;
@@ -65,7 +67,7 @@ header h1 {
 
 .filter-btn.active,
 .filter-btn:hover {
-    background: #667eea;
+    background: #2563eb;
     color: white;
 }
 
@@ -80,14 +82,14 @@ header h1 {
 }
 
 .btn-primary {
-    background: #667eea;
+    background: #2563eb;
     color: white;
 }
 
 .btn-primary:hover {
-    background: #5568d3;
+    background: #1d4ed8;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
 }
 
 .btn-success { background: #10b981; color: white; }
@@ -103,12 +105,13 @@ header h1 {
 }
 
 .stat-card {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    /* การ์ดสถิติใช้ Gradient น้ำเงินไปแดง */
+    background: linear-gradient(135deg, #3b82f6 0%, #f43f5e 100%);
     color: white;
     padding: 25px;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
 }
 
 .stat-card h3 {
@@ -139,7 +142,7 @@ header h1 {
 .book-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-    border-color: #667eea;
+    border-color: #f43f5e; /* เปลี่ยนเป็นสีออกแดงเวลา hover */
 }
 
 .book-card h3 {
@@ -223,7 +226,7 @@ header h1 {
 }
 
 .modal-header h2 {
-    color: #667eea;
+    color: #2563eb;
 }
 
 .close {
@@ -258,7 +261,7 @@ header h1 {
 
 .form-group input:focus {
     outline: none;
-    border-color: #667eea;
+    border-color: #2563eb;
 }
 
 .form-actions {

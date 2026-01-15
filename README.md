@@ -29,7 +29,7 @@ midterm-bonus-<67543210032-8>/
 cd backend
 npm install
 npm start
-# Server: http://localhost:3000
+# Server: http://192.168.56.101:3000
 
 
 ### Frontend (Client - Local)
